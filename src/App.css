@@ -1,38 +1,322 @@
-.App {
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* Base Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 125%;
+}
+
+.app {
+  margin-top: 5%;
+}
+
+.wrapper{
+  max-width: 1260px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+body {
+  background-image: url(../assets/loretta-rosa-wAEWQ8J-kXw-unsplash.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover,
+a:focus {
+  border-bottom: 2px solid #580939;
+  color: #580939;
+}
+
+
+/* Font Styles */
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: 3rem;
+  /* letter-spacing: 1px; */
+  letter-spacing: 0.1rem;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  /* letter-spacing: 1px; */
+  letter-spacing: 0.1rem;
+  margin-bottom: 2%;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  /* letter-spacing: 1px; */
+  letter-spacing: 0.1rem;
+  font-size: 1rem;
+  line-height: 26px;
+  margin-bottom: 2%;
+}
+
+.affirmation {
+  /* font-family: 'Shadows Into Light', cursive; */
+  font-family: 'Kalam', cursive;
+  font-size: 1.8rem;
+  color: #006B88;
+  /* letter-spacing: 1.5px; */
+  letter-spacing: 0.1rem;
+  padding: 5% 0;
+  line-height: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* General Styles */
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: rgba(216,214,219,0.6);
+  /* margin-top: 5%; */
+  margin: 5% 0;
+}
+
+.appDescription {
+  display: flex;
+  flex-direction: column;
+  /* width: 70%; */
+  margin-bottom: 2%;
+  text-align: center;
+  padding: 0 5%;  
+}
+
+.buttonComponent {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin: 2% 0;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  text-transform: lowercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button {
+    color: #580939;
+    background-color: transparent;
+    padding: 18px 36px;
+    border: 2px solid #580939;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2rem;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 30px;
+}
+
+button:hover,
+button:focus {
+  /* background-color: #B9B7C6; */
+  background-color: #580939;
+  color: #FFF;
+  border: 2px solid #580939;
+}
+
+.displayAffirmations button {
+  margin-bottom: 5%;
+}
+
+
+/* SavedAffirmations.js Button Styling */
+
+.removeButton {
+    color: #580939;
+    background-color: transparent;
+    padding: 2% 4%;
+    border: 2px solid #580939;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 30px;
+}
+
+.removeButton:hover,
+.removeButton:focus {
+  background-color: #580939;
+  color: #FFF;
+  border: 2px solid #580939;
+}
+
+.displayAffirmations {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  margin: 5% 0;
+  background-color: rgba(216,214,219,0.6);
+  /* padding: 2% 0; */
+}
+
+.savedAffirmations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 5% 0;
+  padding: 5% 5%;
+  background-color: rgba(216,214,219,0.6);
+}
+
+.savedAffirmations li {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #580939;
+}
+
+.savedAffirmations .affirmation {
+  /* padding: 1%; */
+  /* margin-bottom: 1%; */
+  margin-bottom: 0;
+  margin-right: 30px;
+  text-align: left;
+}
+
+footer p {
+  padding: 2% 0;
+  margin-bottom: 0;
+  text-align: center;
+  background-color: rgb(216,214,219);
+}
+
+/* Media Queries */
+
+@media (max-width: 775px) {
+  header h3 {
+    padding: 0 5%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .appDescription {
+    padding-top: 2%;
   }
+  
+  .nextLine {
+    display: block;
+    text-align: center;
+  }
+
+  .savedAffirmations li {
+    padding: 0 2%;
+  }
+
+  .displayAffirmations {
+    padding: 0 2%;
+  }
+
+  .displayAffirmations button {
+    margin-bottom: 5%;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .affirmation,
+  .savedAffirmations .affirmation {
+    font-size: 1.5rem;
+  }
+
+  .savedAffirmations .affirmation {
+    text-align: center;
+    margin-right: 0;
+    padding: 4% 0;
+    /* margin-bottom: 2%; */
+  }
+
+  .savedAffirmations li {
+    flex-direction: column-reverse;
+  }
+
+  .removeButton {
+    margin-bottom: 2%;
+  }
+
+  footer p {
+    padding: 2% 4%;
+  }
+
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    width: 85%;
+  }
+  
+  header h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  
+  p {
+    margin-bottom: 5%;
+  }
+
+  .affirmation,
+  .savedAffirmations .affirmation {
+    line-height: 1.8rem;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .number {
+    display: block;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  header h3 {
+    margin-bottom: 3%;
+  }
+
+  button,
+  .removeButton {
+    font-size: 0.8rem;
+  }
+
+  .savedAffirmations h3 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
 }
